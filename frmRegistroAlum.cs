@@ -73,10 +73,14 @@ namespace pryCadoppiIG
                 turnoSeleccionado = "No seleccionado";
             }
 
-            if (turnoSeleccionado == "No seleccionado" || generoSeleccionado == "No seleccionado")
+            //Cargamos el mensaje a mostrar luego de Registrar
+            //En caso de no completar todos los campos salta este mensaje
+
+            if (turnoSeleccionado == "No seleccionado" || generoSeleccionado == "No seleccionado" || txtApellido.Text == "" || txtDni.Text == "" || txtNom.Text == "")
             {
                 MessageBox.Show("Por favor, completa las opciones antes de registrar.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            //Si esta todo completo muestra Registro exitoso
             else
             {
                 string mensaje = $"¡Registro Exitoso\n\nNombre: {txtNom.Text} \nApellido: {txtApellido.Text} \nDNI: {txtDni.Text} \nTurno: {turnoSeleccionado}\nGénero:{generoSeleccionado}";
