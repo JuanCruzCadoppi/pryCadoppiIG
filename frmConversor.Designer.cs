@@ -121,6 +121,7 @@
             Controls.Add(lblValor);
             Name = "frmConversor";
             Text = "Conversor";
+            Load += frmConversor_Load;
             ResumeLayout(false);
             PerformLayout();
         }
