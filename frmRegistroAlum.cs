@@ -101,12 +101,10 @@ namespace pryCadoppiIG
             LimpiarComponentes();
         }
 
-        private void txtNom_TextChanged(object sender, EventArgs e)
-        {
-            if (txtNom.Text != "")
-            { 
-
-            }
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        { 
+            txtApellido.Enabled = txtNom.Text != "";
+            txtDni.Enabled = txtApellido.Text != "";   
         }
     }
 }
