@@ -70,17 +70,17 @@ namespace pryCadoppiIG
             //Evaluamos turno
             if (chkMañana.Checked)
             {
-                turnoSeleccionado = "Mañana";
+                turnoSeleccionado = "Mañana ";
             }
-            else if (chkTarde.Checked)
+            if (chkTarde.Checked)
             {
-                turnoSeleccionado = "Tarde";
+                turnoSeleccionado = turnoSeleccionado + "Tarde ";
             }
-            else if (chkNoche.Checked)
+            if (chkNoche.Checked)
             {
-                turnoSeleccionado = "Noche";
+                turnoSeleccionado = turnoSeleccionado + "Noche ";
             }
-            else
+            if (chkMañana.Checked == false && chkTarde.Checked == false && chkNoche.Checked == false )
             {
                 turnoSeleccionado = "No seleccionado";
             }
@@ -95,10 +95,11 @@ namespace pryCadoppiIG
             //Si esta todo completo muestra Registro exitoso
             else
             {
-                string mensaje = $"¡Registro Exitoso\n\nNombre: {txtNom.Text} \nApellido: {txtApellido.Text} \nDNI: {txtDni.Text} \nTurno: {turnoSeleccionado}\nGénero:{generoSeleccionado} \nCarrera: {cmbCarrera.Text}";
-                MessageBox.Show(mensaje, "Datos Regsitrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string mensaje = $"¡Registro Exitoso\n\nNOMBRE {txtNom.Text} \nAPELLIDO {txtApellido.Text} \nDNI {txtDni.Text} \nTURNO {turnoSeleccionado}\nGENERO {generoSeleccionado} \nCARRERA {cmbCarrera.Text}";
+                MessageBox.Show(mensaje, "Datos Registrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarComponentes();
             }
-            LimpiarComponentes();
+            
         }
 
         private void TextBox_TextChanged(object sender, EventArgs e)
