@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConversor));
             lblValor = new Label();
             lblDesde = new Label();
             lblHacia = new Label();
@@ -124,6 +125,7 @@
             Controls.Add(lblDesde);
             Controls.Add(lblValor);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmConversor";
