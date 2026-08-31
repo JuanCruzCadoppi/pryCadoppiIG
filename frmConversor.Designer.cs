@@ -73,9 +73,11 @@
             btnConvertir.TabIndex = 3;
             btnConvertir.Text = "Convertir";
             btnConvertir.UseVisualStyleBackColor = true;
+            btnConvertir.Click += btnConvertir_Click;
             // 
             // cmbDesde
             // 
+            cmbDesde.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDesde.FormattingEnabled = true;
             cmbDesde.Location = new Point(89, 84);
             cmbDesde.Name = "cmbDesde";
@@ -84,6 +86,7 @@
             // 
             // cmbHacia
             // 
+            cmbHacia.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbHacia.FormattingEnabled = true;
             cmbHacia.Location = new Point(89, 118);
             cmbHacia.Name = "cmbHacia";
@@ -96,6 +99,7 @@
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(100, 23);
             txtValor.TabIndex = 6;
+            txtValor.KeyPress += txtValor_KeyPress;
             // 
             // lblResultado
             // 
@@ -119,7 +123,11 @@
             Controls.Add(lblHacia);
             Controls.Add(lblDesde);
             Controls.Add(lblValor);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmConversor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Conversor";
             Load += frmConversor_Load;
             ResumeLayout(false);

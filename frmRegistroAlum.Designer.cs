@@ -78,7 +78,7 @@
             lblSexo.AutoSize = true;
             lblSexo.Location = new Point(29, 126);
             lblSexo.Name = "lblSexo";
-            lblSexo.Size = new Size(34, 15);
+            lblSexo.Size = new Size(35, 15);
             lblSexo.TabIndex = 3;
             lblSexo.Text = "Sexo:";
             // 
@@ -87,7 +87,7 @@
             lblTurno.AutoSize = true;
             lblTurno.Location = new Point(29, 167);
             lblTurno.Name = "lblTurno";
-            lblTurno.Size = new Size(42, 15);
+            lblTurno.Size = new Size(41, 15);
             lblTurno.TabIndex = 4;
             lblTurno.Text = "Turno:";
             // 
@@ -172,7 +172,7 @@
             chkTarde.AutoSize = true;
             chkTarde.Location = new Point(181, 163);
             chkTarde.Name = "chkTarde";
-            chkTarde.Size = new Size(55, 19);
+            chkTarde.Size = new Size(54, 19);
             chkTarde.TabIndex = 13;
             chkTarde.Text = "Tarde";
             chkTarde.UseVisualStyleBackColor = true;
