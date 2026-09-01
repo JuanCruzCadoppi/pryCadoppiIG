@@ -80,7 +80,7 @@ namespace pryCadoppiIG
             {
                 turnoSeleccionado = turnoSeleccionado + "Noche ";
             }
-            if (chkMañana.Checked == false && chkTarde.Checked == false && chkNoche.Checked == false )
+            if (chkMañana.Checked == false && chkTarde.Checked == false && chkNoche.Checked == false)
             {
                 turnoSeleccionado = "No seleccionado";
             }
@@ -99,13 +99,21 @@ namespace pryCadoppiIG
                 MessageBox.Show(mensaje, "Datos Registrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpiarComponentes();
             }
-            
+
         }
 
         private void TextBox_TextChanged(object sender, EventArgs e)
-        { 
+        {
             txtApellido.Enabled = txtNom.Text != "";
-            txtDni.Enabled = txtApellido.Text != "";   
+            txtDni.Enabled = txtApellido.Text != "";
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= 48 && e.KeyChar <= 57) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
